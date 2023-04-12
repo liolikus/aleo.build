@@ -55,7 +55,7 @@ const GettingStartedPage: NextPageWithLayout = () => {
         >
           &bull; Download and Install {' '}
           
-          <a href="https://www.aleo.org/" >Aleo</a>
+          <a href="https://link.leo.app/chromestore" >Leo Wallet</a>
         </Section>
         <Section title="STEP 2 - CREATE A NEW WALLET ACCOUNT" bgColor="">
           &bull; Import your Private Key if needed
