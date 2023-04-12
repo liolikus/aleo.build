@@ -24,7 +24,9 @@ const mintPage: NextPageWithLayout = () => {
   let [bakeCookieToAddress, setBakeCookieToAddress] = useState('');
   let [cookieType, setCookieType] = useState<number | undefined>();
   let [cookieType1, setCookieType1] = useState<number | undefined>();
-
+  // let [cookieDeliciousness, setCookieDeliciousness] = useState<
+  //   number | undefined
+  // >();
   let [bakeCookieTxPayload, setBakeCookieTxPayload] = useState<string>('');
 
   // Eat Cookie State
@@ -40,7 +42,7 @@ const mintPage: NextPageWithLayout = () => {
     const inputs = [
       bakeCookieToAddress,
       `${cookieType}u64`,
-
+      // `${cookieDeliciousness}u64`,
     ];
 
     const aleoTransaction = Transaction.createTransaction(
@@ -67,7 +69,7 @@ const mintPage: NextPageWithLayout = () => {
   const handleEatCookieSubmit = async (event: any) => {
     event.preventDefault();
     if (!publicKey) throw new WalletNotConnectedError();
-
+    // let [toAddress, setToAddress] = useState('');
 
     const inputs = [ eatCookieRecord, `${cookieType1}u64`];
     
@@ -89,7 +91,8 @@ const mintPage: NextPageWithLayout = () => {
     event.target.elements[0].value = '';
   }
     setEatCookieTxPayload(
-      `Check your wallet to see the transaction.`
+      `Check your wallet to see the transaction. \n 
+      Note: Spent status may take awhile to update.`
     );
   };
 
@@ -107,7 +110,10 @@ const mintPage: NextPageWithLayout = () => {
   };
   
   
-
+  // const handleDeliciousnessChange = (event: any) => {
+  //   event.preventDefault();
+  //   setCookieDeliciousness(event.currentTarget.value);
+  // };
   const handleEatCookieRecordChange = (event: any) => {
     event.preventDefault();
     setEatCookieRecord(event.currentTarget.value);
@@ -170,7 +176,21 @@ const mintPage: NextPageWithLayout = () => {
                 <Check className="h-4 w-4" />
               </span>
             </label>
-
+            {/* <p className="mt-4">Cookie deliciousness: </p> */}
+            {/* <label className="flex w-full items-center py-4">
+              <input
+                //className="h-11 w-full appearance-none rounded-lg border-2 border-gray-200 bg-transparent py-1 text-sm tracking-tighter text-gray-900 outline-none transition-all placeholder:text-gray-600 focus:border-gray-900 ltr:pr-5 ltr:pl-10 rtl:pr-10 dark:border-gray-600 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-gray-500"
+                // placeholder="How delicious should this cookie be? Use u64"
+                // autoComplete="off"
+                // onChange={(event: FormEvent<Element>) =>
+                //   handleDeliciousnessChange(event)
+                // }
+                // value={cookieDeliciousness}
+              />
+              <span className="pointer-events-none absolute flex h-full w-8 cursor-pointer items-center justify-center text-gray-600 hover:text-gray-900 ltr:left-0 ltr:pl-2 rtl:right-0 rtl:pr-2 dark:text-gray-500 sm:ltr:pl-3 sm:rtl:pr-3">
+                <Check className="h-4 w-4" />
+              </span>
+            </label> */}
             <div className="flex items-center justify-center">
               <Button
                 disabled={!publicKey || bakeCookieToAddress.length < 1}
@@ -190,7 +210,11 @@ const mintPage: NextPageWithLayout = () => {
             </div>
           )}
         </Section>
-
+        {/* <Section title="STEP 2 - CHECK YOUR TOKENS" bgColor="">
+          <RecordsPage
+            initialProgram={THE_LIOLIK_PROGRAM_NAME}
+          ></RecordsPage>
+        </Section> */}
         <Section
           title="Transfer a-Token"
           bgColor="bg-white shadow-card dark:bg-light-dark"
@@ -208,7 +232,7 @@ const mintPage: NextPageWithLayout = () => {
             <label className="flex w-full items-center py-4">
               <input
                 className="h-11 w-full appearance-none rounded-lg border-2 border-gray-200 bg-transparent py-1 text-sm tracking-tighter text-gray-900 outline-none transition-all placeholder:text-gray-600 focus:border-gray-900 ltr:pr-5 ltr:pl-10 rtl:pr-10 dark:border-gray-600 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-gray-500"
-                placeholder="Recipient Address"
+                placeholder="Recipient address"
                 autoComplete="off"
                 onChange={(event: FormEvent<Element>) =>
                   handleEatCookieRecordChange(event)

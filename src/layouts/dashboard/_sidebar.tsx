@@ -35,21 +35,22 @@ const menuItems = [
   //   icon: <Unlocked />,
   //   href: routes.decrypt,
   // },
-  // {
-  //   name: 'Records',
-  //   icon: <FarmIcon />,
-  //   href: routes.records,
-  // },
-  // {
-  //   name: 'Transfer',
-  //   icon: <ChevronForward />,
-  //   href: routes.transfer,
-  // },
   {
     name: 'Mint Token',
     icon: <OvenIcon />,
     href: routes.mint,
   },
+  {
+    name: 'my Tutorials',
+    icon: <FarmIcon />,
+    href: routes.records,
+  },
+  // {
+  //   name: 'Transfer',
+  //   icon: <ChevronForward />,
+  //   href: routes.transfer,
+  // },
+
 ];
 
 type SidebarProps = {

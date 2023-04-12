@@ -18,7 +18,7 @@ const TransactionPage: NextPageWithLayout = () => {
 
   let [toAddress, setToAddress] = useState('');
   let [amount, setAmount] = useState<number | undefined>();
-  let [record, setRecord] = useState('');
+  // let [record, setRecord] = useState('');
   let [downloading, setDownloading] = useState(false);
 
   let [txPayload, setTxPayload] = useState<string>('');
@@ -27,12 +27,12 @@ const TransactionPage: NextPageWithLayout = () => {
     event.preventDefault();
     if (!publicKey) throw new WalletNotConnectedError();
 
-    const inputs = [JSON.parse(record), toAddress, `${amount}u64`];
+     const inputs = [ toAddress, `${amount}u64`];
     const aleoTransaction = Transaction.createTransaction(
       publicKey,
       WalletAdapterNetwork.Testnet,
-      'credits.aleo',
-      'transfer',
+      'a.aleo',
+      'transfer_public',
       inputs
     );
 
@@ -54,10 +54,10 @@ const TransactionPage: NextPageWithLayout = () => {
     event.preventDefault();
     setAmount(event.currentTarget.value);
   };
-  const handleRecordChange = (event: any) => {
-    event.preventDefault();
-    setRecord(event.currentTarget.value);
-  };
+  // const handleRecordChange = (event: any) => {
+  //   event.preventDefault();
+  //   setRecord(event.currentTarget.value);
+  // };
 
   return (
     <>
@@ -103,7 +103,7 @@ const TransactionPage: NextPageWithLayout = () => {
             </span>
           </label>
           <label className="flex w-full items-center py-4">
-            <input
+            {/* <input
               className="h-11 w-full appearance-none rounded-lg border-2 border-gray-200 bg-transparent py-1 text-sm tracking-tighter text-gray-900 outline-none transition-all placeholder:text-gray-600 focus:border-gray-900 ltr:pr-5 ltr:pl-10 rtl:pr-10 dark:border-gray-600 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-gray-500"
               placeholder="Record, get from Records form"
               autoComplete="off"
@@ -111,14 +111,14 @@ const TransactionPage: NextPageWithLayout = () => {
                 handleRecordChange(event)
               }
               value={record}
-            />
+            /> */}
             <span className="pointer-events-none absolute flex h-full w-8 cursor-pointer items-center justify-center text-gray-600 hover:text-gray-900 ltr:left-0 ltr:pl-2 rtl:right-0 rtl:pr-2 dark:text-gray-500 sm:ltr:pl-3 sm:rtl:pr-3">
               <Check className="h-4 w-4" />
             </span>
           </label>
           <div className="flex items-center justify-center">
             <Button
-              disabled={!publicKey || record.length < 1}
+              //disabled={!publicKey || record.length < 1}
               type="submit"
               color="white"
               className="shadow-card dark:bg-gray-700 md:h-10 md:px-5 xl:h-12 xl:px-7"
