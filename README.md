@@ -9,7 +9,7 @@ The goal of this demo is to show how to build a website that integrates with Ale
 
 ## Demo 
 
-You can find [this site live here](https://demo.leo.app)
+You can find [this site live here](https://www.aleo.build/)
 
 ## 🚀 Quick Start
 
@@ -23,7 +23,7 @@ Then run the following:
 ### 1) Clone the repository
 
 ```bash
-git clone https://github.com/demox-labs/leo-wallet-demo && cd leo-wallet-demo
+git clone https://github.com/liolikus/aleo.build && cd aleo.build
 ```
 
 ### 2) Install dependencies
