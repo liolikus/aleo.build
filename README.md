@@ -1,13 +1,3 @@
-# Leo Wallet Demo
-
-This is a NextJS-based demo site for the [Aleo Wallet Adapter](https://github.com/demox-labs/aleo-wallet-adapter) to be used on the [Aleo blockchain](https://aleo.org). <br>
-
-The goal of this demo is to show how to build a website that integrates with Aleo Wallets like the [aleo.build](https://www.aleo.build/)
-
-
-<hr />
-
-## Demo 
 
 You can find [this site live here](https://www.aleo.build/)
 
