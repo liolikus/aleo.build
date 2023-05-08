@@ -55,7 +55,7 @@ const GettingStartedPage: NextPageWithLayout = () => {
         >
           &bull; Download and Install {' '}
           
-          <a href="https://link.leo.app/chromestore" >Leo Wallet</a>
+          <a href="https://www.aleo.org/" >Aleo</a>
         </Section>
         <Section title="STEP 2 - CREATE A NEW WALLET ACCOUNT" bgColor="">
           &bull; Import your Private Key if needed
@@ -67,13 +67,7 @@ const GettingStartedPage: NextPageWithLayout = () => {
 
           <WalletMultiButton className="bg-[#B2B6C7]" />
         </Section>
-        <Section title="" bgColor="">
-          {/* &bull; Click on the button below to start signing your first Aleo
-          messages! <br /> <br /> */}
-          <a href={`${routes.mint}`}>
-            <Button>Start!</Button>
-          </a>
-        </Section>
+
       </div>
     </>
   );

@@ -9,7 +9,6 @@ import ModalsContainer from '@/components/modal-views/container';
 import DrawersContainer from '@/components/drawer-views/container';
 import SettingsButton from '@/components/settings/settings-button';
 import SettingsDrawer from '@/components/settings/settings-drawer';
-// base css file
 import 'swiper/css';
 import '@/assets/css/scrollbar.css';
 import '@/assets/css/globals.css';
@@ -27,7 +26,7 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
   const wallets = useMemo(
     () => [
       new LeoWalletAdapter({
-        appName: 'Leo Demo App',
+        appName: 'aleo.build',
       }),
     ],
     []
@@ -38,7 +37,7 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <>
       <Head>
-        {/* maximum-scale 1 meta tag need to prevent ios input focus auto zooming */}
+        
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1 maximum-scale=1"
@@ -48,7 +47,7 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
         <Hydrate state={pageProps.dehydratedState}>
           <WalletProvider
             wallets={wallets}
-            decryptPermission={DecryptPermission.UponRequest}
+            decryptPermission={DecryptPermission.AutoDecrypt}
             autoConnect
           >
             <WalletModalProvider>
