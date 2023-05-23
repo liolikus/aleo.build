@@ -46,7 +46,7 @@ const GettingStartedPage: NextPageWithLayout = () => {
       />
       <div className="mx-auto w-full px-4 pt-8 pb-14 sm:px-6 sm:pb-20 sm:pt-12 lg:px-8 xl:px-10 2xl:px-0">
         <h2 className="mb-6 text-lg font-medium uppercase tracking-wider text-gray-900 dark:text-white sm:mb-10 sm:text-2xl">
-          Getting Started
+          Getting Started || THIS IS NOT AN OFFICIAL ALEO DAPP
         </h2>
 
         <Section
