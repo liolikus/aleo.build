@@ -46,7 +46,7 @@ const GettingStartedPage: NextPageWithLayout = () => {
       />
       <div className="mx-auto w-full px-4 pt-8 pb-14 sm:px-6 sm:pb-20 sm:pt-12 lg:px-8 xl:px-10 2xl:px-0">
         <h2 className="mb-6 text-lg font-medium uppercase tracking-wider text-gray-900 dark:text-white sm:mb-10 sm:text-2xl">
-          Getting Started
+          Getting Started || THIS IS NOT AN OFFICIAL ALEO DAPP
         </h2>
 
         <Section
@@ -55,7 +55,7 @@ const GettingStartedPage: NextPageWithLayout = () => {
         >
           &bull; Download and Install {' '}
           
-          <a href="https://www.aleo.org/" >Aleo</a>
+          <a href="https://link.leo.app/chromestore" >Leo Wallet</a>
         </Section>
         <Section title="STEP 2 - CREATE A NEW WALLET ACCOUNT" bgColor="">
           &bull; Import your Private Key if needed
@@ -67,7 +67,13 @@ const GettingStartedPage: NextPageWithLayout = () => {
 
           <WalletMultiButton className="bg-[#B2B6C7]" />
         </Section>
-
+        <Section title="" bgColor="">
+          {/* &bull; Click on the button below to start signing your first Aleo
+          messages! <br /> <br /> */}
+          <a href={`${routes.mint}`}>
+            <Button>Start!</Button>
+          </a>
+        </Section>
       </div>
     </>
   );
