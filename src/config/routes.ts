@@ -6,6 +6,7 @@ const routes = {
   records: '/records',
   transfer: '/transfer',
   mint: '/mint',
+  quiz: '/quiz',
 };
 
 export default routes;

@@ -13,43 +13,16 @@ import { Close } from '@/components/icons/close';
 import { Unlocked } from '@/components/icons/unlocked';
 import { OvenIcon } from '@/components/icons/oven';
 import { Sun } from '@/components/icons/sun';
+import { OptionIcon } from '@/components/icons/option';
 
 const menuItems = [
-  // {
-  //   name: 'Getting Started',
-  //   icon: <HomeIcon />,
-  //   href: routes.gettingStarted,
-  // },
-  // {
-  //   name: 'Faucet',
-  //   icon: <Sun />,
-  //   href: routes.faucet,
-  // },
-  // {
-  //   name: 'Sign',
-  //   icon: <ExchangeIcon />,
-  //   href: routes.sign,
-  // },
-  // {
-  //   name: 'Decrypt',
-  //   icon: <Unlocked />,
-  //   href: routes.decrypt,
-  // },
-  {
-    name: 'Mint Token',
-    icon: <OvenIcon />,
-    href: routes.mint,
-  },
+
   {
     name: 'my Tutorials',
     icon: <FarmIcon />,
     href: routes.records,
   },
-  // {
-  //   name: 'Transfer',
-  //   icon: <ChevronForward />,
-  //   href: routes.transfer,
-  // },
+
 
 ];
 

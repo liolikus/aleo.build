@@ -13,7 +13,6 @@ import {
   WalletAdapterNetwork,
   WalletNotConnectedError,
 } from '@demox-labs/aleo-wallet-adapter-base';
-import RecordsPage from './records';
 
 const mintPage: NextPageWithLayout = () => {
   const THE_LIOLIK_PROGRAM_NAME = 'a.aleo';
@@ -30,9 +29,6 @@ const mintPage: NextPageWithLayout = () => {
   // Eat Cookie State
   let [eatCookieRecord, setEatCookieRecord] = useState<string>('');
   let [eatCookieTxPayload, setEatCookieTxPayload] = useState<string>('');
-  let [mintToAddress, setMintToAddress] = useState('');
-  let [transferAmount, setAmount] = useState<number | undefined>();
-  let [record, setRecord] = useState('');
 
 
 
@@ -71,8 +67,6 @@ const mintPage: NextPageWithLayout = () => {
   const handleEatCookieSubmit = async (event: any) => {
     event.preventDefault();
     if (!publicKey) throw new WalletNotConnectedError();
-    // let [toAddress, setToAddress] = useState('');
-    // const { requestRecords } = useWallet();
     const records = await requestRecords!('a.aleo');
     const recordToSpend = records.filter(rec => !rec.spent)[0];
 

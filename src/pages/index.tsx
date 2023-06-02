@@ -68,11 +68,15 @@ const GettingStartedPage: NextPageWithLayout = () => {
           <WalletMultiButton className="bg-[#B2B6C7]" />
         </Section>
         <Section title="" bgColor="">
-          {/* &bull; Click on the button below to start signing your first Aleo
-          messages! <br /> <br /> */}
-          <a href={`${routes.mint}`}>
-            <Button>Start!</Button>
-          </a>
+
+        <a href="https://quiz.aleo.build/">
+          <Button>Quiz DApp</Button>
+        </a>
+        <a> </a>
+        <a href={`${routes.mint}`}>
+          <Button>Mint DApp</Button>
+        </a>
+        
         </Section>
       </div>
     </>
