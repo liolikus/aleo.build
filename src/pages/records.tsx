@@ -153,6 +153,16 @@ const RecordsPage: NextPageWithLayout = () => {
   
         </Section>
 
+        <Section
+          title="Deploy and mint tokens on Aleo without a node | testnet_3"
+          bgColor="bg-white shadow-card dark:bg-light-dark"
+        >
+          &bull; {' '}
+          <a href="https://medium.com/@alex.brunko/deploy-and-mint-tokens-on-aleo-without-a-node-windows-chrome-leo-wallet-c6127431f19e">English</a>
+          &bull; {' '}
+          <a href="https://medium.com/@alex.brunko/%D0%B4%D0%B5%D0%BF%D0%BB%D0%BE%D0%B9-%D0%B8-%D0%BC%D0%B8%D0%BD%D1%82-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD%D0%B0-%D0%BD%D0%B0-aleo-%D0%B1%D0%B5%D0%B7-%D0%BD%D0%BE%D0%B4%D1%8B-%D0%B8-%D0%B7%D0%B0%D0%BC%D0%BE%D1%80%D0%BE%D1%87%D0%B5%D0%BA-932c74f491a8">Russian</a>
+        </Section>
+
       </div>
     </>
   );
